@@ -11,9 +11,9 @@ import java.util.List;
 
 public class ProdutoDAO {
     // Parâmetros de conexão direta via JDBC para MySQL
-    private static final String URL = "jdbc:mysql://localhost:3306/loja_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+    private static final String URL = "jdbc:mysql://localhost:3306/loja_db";
     private static final String USER = "root";
-    private static final String PASS = "postgres";
+    private static final String PASS = "josepassword";
 
     /**
      * 1. Cria a tabela automaticamente via JDBC se ela não existir.
