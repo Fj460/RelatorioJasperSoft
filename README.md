@@ -30,3 +30,28 @@ Antes de executar o projeto, abre o ficheiro `src/main/java/com/exemplo/dao/Prod
 private static final String URL = "jdbc:mysql://localhost:3306/loja_db";
 private static final String USER = "root";
 private static final String PASS = "josepassword";
+```
+
+
+
+## Como Provisionar a Base de Dados e Garantir a Conexão
+
+Antes de executar a aplicação no NetBeans, o servidor MySQL precisa de estar ativo e a base de dados `loja_db` deve estar criada.
+
+### 1. Iniciar o Servidor MySQL
+Certifica-te de que o serviço do MySQL/MariaDB está em execução no teu computador:
+* **Via XAMPP / WAMP / Laragon:** Abre o painel de controlo e clica em **Start** no módulo **MySQL** (verifica se a porta apresentada é a `3306`).
+* **Via Instalação Nativa (Windows/Linux/macOS):** Garante que o serviço `mysql` ou `mysqld` está ativo nos serviços do sistema operativo.
+
+### 2. Criar a Base de Dados (`loja_db`)
+Cria apenas o schema vazio — a aplicação Java encarrega-se de criar a tabela `produtos` e inserir os dados de exemplo automaticamente na primeira execução.
+
+* **Pelo phpMyAdmin (`http://localhost/phpmyadmin`):**
+  1. Clica em **New** (Nova) no menu lateral esquerdo.
+  2. Escreve `loja_db` no nome da base de dados.
+  3. Clica em **Create** (Criar).
+
+* **Pelo MySQL Workbench ou Terminal:**
+  Executa o seguinte comando SQL:
+  ```sql
+  CREATE DATABASE IF NOT EXISTS loja_db;
